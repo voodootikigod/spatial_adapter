@@ -140,7 +140,7 @@ ActiveRecord::Base.class_eval do
 end
 
 
-ActiveRecord::ConnectionAdapters::MysqlAdapter.class_eval do
+ActiveRecord::ConnectionAdapters::MasterSlaveAdapter.class_eval do
   
   include SpatialAdapter
 
