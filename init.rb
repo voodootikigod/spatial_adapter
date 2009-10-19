@@ -3,7 +3,7 @@ end
 
 
 case ActiveRecord::Base.configurations[RAILS_ENV]['adapter']
-when 'mysql'
+when 'mysql', 'master_slave'     #adding for handling mysql replication via master_slave
   require 'mysql_spatial_adapter'
 when 'postgresql'
   require 'post_gis_adapter'
